@@ -2,7 +2,7 @@ require("bootstrap");
 const createEl = require("./domMethods");
 const createLoremIpsum = require("./helpers");
 
-if (window.location.href.indexOf("event") > -1) {
+$(document).ready(function () {
   const currentEvent = JSON.parse(localStorage.getItem("currentEvent")) || {
     title: "Title Placeholder",
     subtitle: "",
@@ -41,4 +41,4 @@ if (window.location.href.indexOf("event") > -1) {
   );
 
   pageEl.appendChild(containerEl);
-}
+});

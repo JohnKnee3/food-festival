@@ -1,12 +1,6 @@
 require("bootstrap");
 
-if (window.location.href.indexOf("tickets") > -1) {
-  const purchaseBtn = document.getElementById("purchaseBtn");
-  const purchaseEmail = document.getElementById("purchaseEmail");
-  const modalEl = document.querySelector(".modal-content");
-  const modalBodyEl = document.querySelector(".modal-body");
-  const modalFooterEl = document.querySelector(".modal-footer");
-
+$(document).ready(function () {
   function purchaseTicket() {
     modalEl.removeChild(modalBodyEl);
     modalEl.removeChild(modalFooterEl);
@@ -24,4 +18,4 @@ if (window.location.href.indexOf("tickets") > -1) {
     );
   }
   purchaseBtn.addEventListener("click", purchaseTicket);
-}
+});
